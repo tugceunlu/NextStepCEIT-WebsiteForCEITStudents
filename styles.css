@@ -286,3 +286,60 @@ footer ul {
         grid-template-columns: 1fr; /* mobilde tek tek gözüksün */
     }
 }
+
+/* Hide menu toggle on large screens */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hidden by default */
+        width: 100%;
+        background-color: #800000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li {
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-wrapper.show nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: #a52a2a;
+    }
+
+    .dropdown-content a {
+        color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none; /* Disable hover on mobile */
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+}
+
