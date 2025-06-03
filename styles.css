@@ -370,3 +370,43 @@ footer ul {
     }
 }
 
+
+/* Make department image responsive */
+#faculty-info img {
+    width: 100%;
+    height: auto;
+    max-width: 950px;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Wrap table to allow horizontal scroll on small screens */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* Make sure the table can shrink nicely */
+.table-container table {
+    width: 100%;
+    min-width: 600px; /* Forces horizontal scroll instead of breaking layout */
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+@media (max-width: 768px) {
+    /* Optional: Reduce font size in table for smaller screens */
+    .table-container table th,
+    .table-container table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #faculty-info li {
+        margin-left: 1rem;
+    }
+}
+
+
