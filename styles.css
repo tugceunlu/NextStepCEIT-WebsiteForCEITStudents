@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    font-size: clamp(14px, 1.2vw, 18px);
 }
 
 .content {
@@ -12,12 +13,26 @@ body {
     width: 100%;
 }
 
-h1{ color: #ffffff;
-    text-align: center;}
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(22px, 4vw, 36px);
+}
 
-h2, h3{
+h2 {
     color: #800000;
     text-align: center;
+    font-size: clamp(20px, 3vw, 30px);
+}
+
+h3 {
+    color: #800000;
+    text-align: center;
+    font-size: clamp(18px, 2.5vw, 26px);
+}
+
+p, li {
+    font-size: clamp(14px, 1.5vw, 18px);
 }
 
 header {
@@ -109,7 +124,7 @@ section {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);    
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin-top: 20px;
 }
@@ -184,32 +199,6 @@ section {
     }
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-}
-
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    word-break: break-word;
-}
-
-table th {
-    background-color: #800000;
-    color: white;
-    text-align: center;
-}
-
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-table tr:hover {
-    background-color: #f1f1f1;
-}
-
 footer {
     background-color: #222;
     color: #f8f8f8;
@@ -219,7 +208,7 @@ footer {
     line-height: 1.4;
 }
 
-footer a{
+footer a {
     color: white;
 }
 
@@ -229,17 +218,15 @@ footer ul {
     margin: 0;
 }
 
-
 #purpose ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
-#purpose h4{
-    color: #800000;;
+#purpose h4 {
+    color: #800000;
 }
-
 
 .footer-container {
     display: flex;
@@ -283,7 +270,7 @@ footer ul {
 
 @media (max-width: 767px) {
     .cards-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
 
@@ -304,13 +291,11 @@ footer ul {
 
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
-    /* Show menu button */
     .menu-toggle {
         display: block;
         margin-left: auto;
     }
 
-    /* Hide nav by default */
     .nav-wrapper nav {
         display: none;
         width: 100%;
@@ -320,12 +305,10 @@ footer ul {
         padding: 10px 20px;
     }
 
-    /* Show nav when wrapper has .show */
     .nav-wrapper.show nav {
         display: flex;
     }
 
-    /* Nav links layout */
     nav ul {
         flex-direction: column;
         width: 100%;
@@ -341,12 +324,10 @@ footer ul {
         padding: 12px;
     }
 
-    /* Disable hover dropdown for mobile */
     .dropdown:hover .dropdown-content {
         display: none;
     }
 
-    /* Enable click-based dropdown */
     .dropdown-content {
         position: static;
         background-color: #a52a2a;
@@ -370,8 +351,7 @@ footer ul {
     }
 }
 
-
-/* Make department image responsive */
+/* Responsive faculty image */
 #faculty-info img {
     width: 100%;
     height: auto;
@@ -382,22 +362,41 @@ footer ul {
     margin: 0 auto;
 }
 
-/* Wrap table to allow horizontal scroll on small screens */
+/* Responsive table container */
 .table-container {
     overflow-x: auto;
     margin-top: 20px;
 }
 
-/* Make sure the table can shrink nicely */
 .table-container table {
     width: 100%;
-    min-width: 600px; /* Forces horizontal scroll instead of breaking layout */
+    min-width: 600px;
     border-collapse: collapse;
     table-layout: auto;
 }
 
+.table-container table th,
+.table-container table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    word-break: break-word;
+    text-align: center;
+}
+
+.table-container table th {
+    background-color: #800000;
+    color: white;
+}
+
+.table-container table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-container table tr:hover {
+    background-color: #f1f1f1;
+}
+
 @media (max-width: 768px) {
-    /* Optional: Reduce font size in table for smaller screens */
     .table-container table th,
     .table-container table td {
         font-size: 14px;
@@ -408,5 +407,3 @@ footer ul {
         margin-left: 1rem;
     }
 }
-
-
