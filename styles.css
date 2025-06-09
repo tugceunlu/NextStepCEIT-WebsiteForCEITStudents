@@ -27,8 +27,7 @@ h2 {
 }
 
 .content h2 {
-    text-align: left;
-
+    text-align: left !important;
 }
 
 h3 {
