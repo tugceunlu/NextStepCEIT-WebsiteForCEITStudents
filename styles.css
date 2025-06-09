@@ -15,14 +15,20 @@ body {
 
 h1 {
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     font-size: clamp(18px, 4vw, 28px);
 }
+
 
 h2 {
     color: #800000;
     text-align: center;
     font-size: clamp(20px, 3vw, 30px);
+}
+
+.content h2 {
+    text-align: left;
+
 }
 
 h3 {
