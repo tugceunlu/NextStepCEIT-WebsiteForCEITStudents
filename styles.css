@@ -26,9 +26,6 @@ h2 {
     font-size: clamp(20px, 3vw, 30px);
 }
 
-.content h2 {
-    text-align: left !important;
-}
 
 h3 {
     color: #800000;
