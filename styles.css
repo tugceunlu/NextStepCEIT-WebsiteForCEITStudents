@@ -16,7 +16,7 @@ body {
 h1 {
     color: #ffffff;
     text-align: center;
-    font-size: clamp(22px, 4vw, 36px);
+    font-size: clamp(20px, 4vw, 32px);
 }
 
 h2 {
